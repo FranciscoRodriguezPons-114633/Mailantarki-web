@@ -1,0 +1,199 @@
+/* Mailantarki / Projects: six cards built on the product-chapter language. */
+.projects {
+  background: var(--color-night);
+  color: var(--color-paper);
+}
+
+.projects__header {
+  align-items: end;
+  border-bottom: 1px solid rgb(245 242 237 / 0.18);
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin: 0 auto clamp(2.5rem, 5vw, 4.5rem);
+  max-width: var(--container);
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.projects__header .section__index {
+  grid-column: 1 / 4;
+}
+
+.projects__header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 6.4rem);
+  font-weight: 400;
+  grid-column: 4 / 13;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+.projects__header h2 a {
+  color: var(--color-accent);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.projects__header h2 a:hover {
+  color: var(--color-paper);
+}
+
+.projects-grid {
+  display: grid;
+  gap: clamp(2.5rem, 4vw, 4rem) clamp(1.25rem, 2.5vw, 2.5rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-inline: auto;
+  max-width: var(--container);
+}
+
+/* Editorial offset on the middle column, as in the asymmetric RP/A boards. */
+@media (min-width: 1025px) {
+  .projects-grid:not(.projects-grid--compact) > :nth-child(3n + 2) {
+    margin-top: clamp(3rem, 6vw, 6rem);
+  }
+}
+
+.project-card__link {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.project-card__media {
+  aspect-ratio: 4 / 3;
+  background: var(--color-ink);
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card__media img {
+  transform: scale(1.001);
+  transition: transform 900ms var(--ease-out), filter 900ms var(--ease-out);
+}
+
+.project-card__link:hover .project-card__media img,
+.project-card__link:focus-visible .project-card__media img {
+  filter: brightness(1.05);
+  transform: scale(1.045);
+}
+
+.project-card__body {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.project-card__number,
+.project-card__facts dt {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: clamp(0.82rem, 0.74rem + 0.22vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 2.7vw, 3.1rem);
+  font-weight: 400;
+  line-height: 0.95;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.project-card__body > p {
+  color: var(--color-mist);
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
+  line-height: 1.55;
+}
+
+.project-card__facts {
+  border-top: 1px solid rgb(245 242 237 / 0.24);
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-top: var(--space-sm);
+}
+
+.project-card__facts div {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.project-card__facts dd {
+  color: var(--color-paper);
+}
+
+.project-card .text-cta {
+  font-weight: 600;
+}
+
+.project-card__link:hover .text-cta::after {
+  transform: translateX(0.28rem);
+}
+
+/* Compact variant: "More projects" strip on each project page. */
+.projects-grid--compact {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.projects-grid--compact .project-card__title {
+  font-size: clamp(1.45rem, 1.7vw, 2rem);
+}
+
+.projects-grid--compact .project-card__body > p,
+.projects-grid--compact .project-card__facts {
+  display: none;
+}
+
+.projects-grid--compact .project-card__media .image-caption {
+  display: none;
+}
+
+@media (max-width: 1180px) {
+  .projects-grid--compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .projects__header {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__header .section__index,
+  .projects__header h2 {
+    grid-column: 1 / -1;
+  }
+
+  /* Same pattern as the mobile carousels: horizontal scroll with snap. */
+  .projects-grid--compact {
+    display: flex;
+    gap: var(--space-sm);
+    margin-inline: calc(var(--gutter) * -1);
+    overflow-x: auto;
+    padding: 0 var(--gutter) var(--space-xs);
+    scroll-padding-inline: var(--gutter);
+    scroll-snap-type: x mandatory;
+  }
+
+  .projects-grid--compact > * {
+    flex: 0 0 min(72vw, 20rem);
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .projects-grid:not(.projects-grid--compact) {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card__title {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+}

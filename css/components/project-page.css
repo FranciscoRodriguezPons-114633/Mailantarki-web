@@ -1,0 +1,152 @@
+/* Mailantarki / Project page: amenities, location and header details. */
+
+/* Amenities: numbered index on paper, same line + mono language as the plan legend. */
+.amenities {
+  background: linear-gradient(180deg, var(--color-paper), var(--color-mist));
+  color: var(--color-ink);
+}
+
+.amenities__grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-inline: auto;
+  max-width: var(--container);
+}
+
+.amenities__header {
+  align-content: start;
+  display: grid;
+  gap: var(--space-md);
+  grid-column: 1 / 5;
+}
+
+.amenities__header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5.4vw, 6rem);
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.amenities__list {
+  display: grid;
+  gap: 0 clamp(1.25rem, 3vw, 3rem);
+  grid-column: 5 / 13;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.amenities__list li {
+  border-top: 1px solid color-mix(in srgb, var(--color-ink) 24%, transparent);
+  display: grid;
+  gap: 0.4rem;
+  padding: var(--space-sm) 0 var(--space-md);
+}
+
+.amenities__list li > span {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: clamp(0.82rem, 0.74rem + 0.22vw, 0.95rem);
+  font-weight: 600;
+}
+
+.amenities__list strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+/* Location: master-plan layout with a short fact list. */
+.master-plan--location .master-plan__copy h2 {
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
+}
+
+.location__facts {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: var(--space-xs);
+}
+
+.location__facts div {
+  border-top: 1px solid rgb(245 242 237 / 0.24);
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: minmax(6rem, 0.4fr) 1fr;
+  padding-top: var(--space-sm);
+}
+
+.location__facts dt {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: clamp(0.82rem, 0.74rem + 0.22vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.location__facts dd {
+  font-family: var(--font-mono);
+}
+
+/* Plans chapter on paper: drawings need breathing room, not a dark frame. */
+.product-chapter--villas .product-chapter__slides {
+  background: var(--color-mist);
+  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+}
+
+.product-chapter--villas .product-chapter__slide--sketch {
+  background: var(--color-white);
+}
+
+.product-chapter--villas .product-chapter__slide--sketch .image-caption {
+  background: rgb(36 36 36 / 0.82);
+}
+
+/* Header: link back to the home on project pages. */
+.nav .nav__back {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+.nav .nav__back::before {
+  content: "<- ";
+}
+
+.site-header__brand span:last-child {
+  max-width: 24ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.noscript {
+  font-family: var(--font-mono);
+  padding: calc(var(--header-height) + var(--space-xl)) var(--gutter);
+}
+
+@media (max-width: 1024px) {
+  .amenities__header,
+  .amenities__list {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 820px) {
+  .amenities__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .amenities__list {
+    grid-template-columns: 1fr;
+  }
+
+  .location__facts div {
+    gap: 0.35rem;
+    grid-template-columns: 1fr;
+  }
+}

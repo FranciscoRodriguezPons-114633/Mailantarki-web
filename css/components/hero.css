@@ -1,0 +1,192 @@
+/* Segment 1 / Hero: editorial lower brand band. */
+.hero {
+  background: var(--color-night);
+  color: var(--color-paper);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100dvh;
+  overflow: hidden;
+  padding: var(--header-height) 0 0;
+  position: relative;
+}
+
+.hero__media,
+.hero__scrim {
+  inset: 0;
+  position: absolute;
+}
+
+.hero__media {
+  overflow: hidden;
+}
+
+.hero__media img {
+  animation: hero-entry-scale 1.2s var(--ease-out) both;
+  filter: brightness(1.06) contrast(1.08) saturate(1.08);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 46%;
+  transform-origin: center;
+  width: 100%;
+}
+
+.hero__scrim {
+  background:
+    radial-gradient(ellipse at 24% 74%, rgb(24 24 21 / 0.54), transparent 42%),
+    linear-gradient(90deg, rgb(10 10 9 / 0.38), transparent 46%),
+    linear-gradient(180deg, rgb(10 10 9 / 0.38), transparent 24%, rgb(10 10 9 / 0.28));
+}
+
+@keyframes hero-entry-scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.03);
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2;
+  justify-content: end;
+  max-width: var(--container);
+  padding: clamp(2rem, 4vw, 4rem) var(--gutter) clamp(2.5rem, 7vh, 5.5rem);
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero__content::before {
+  background:
+    radial-gradient(ellipse at 18% 56%, rgb(24 24 21 / 0.42), transparent 62%),
+    linear-gradient(0deg, rgb(24 24 21 / 0.5), transparent 82%);
+  content: "";
+  inset: auto 0 0 calc(var(--gutter) * -1);
+  min-height: min(52vh, 34rem);
+  position: absolute;
+  z-index: -1;
+}
+
+.hero__meta {
+  color: var(--color-stone);
+  margin-bottom: var(--space-md);
+}
+
+.hero h1 {
+  color: rgb(245 242 237 / 0.96);
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 400;
+  line-height: 0.86;
+  max-width: min(calc(100vw - (var(--gutter) * 2)), 11.4ch);
+  overflow: visible;
+  padding-inline-end: 0.1em;
+  padding-right: 0.08em;
+  text-shadow: 0 1px 18px rgb(8 8 7 / 0.18);
+  text-wrap: normal;
+  -webkit-text-stroke: 0.25px rgb(245 242 237 / 0.22);
+}
+
+.hero__claim {
+  color: var(--color-paper);
+  font-size: clamp(1.08rem, 1.9vw, 1.55rem);
+  margin-top: var(--space-md);
+  max-width: 27rem;
+}
+
+.hero__footer {
+  align-items: center;
+  bottom: var(--space-sm);
+  color: var(--color-stone);
+  display: flex;
+  gap: clamp(0.5rem, 2vw, var(--space-sm));
+  justify-content: space-between;
+  left: var(--gutter);
+  position: absolute;
+  right: var(--gutter);
+  z-index: 1;
+}
+
+.hero__footer span {
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .hero__content {
+    padding-bottom: clamp(4rem, 10vh, 7rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__scrim {
+    background:
+      radial-gradient(ellipse at 34% 70%, rgb(24 24 21 / 0.66), transparent 48%),
+      linear-gradient(180deg, rgb(10 10 9 / 0.42), transparent 28%, rgb(10 10 9 / 0.34));
+  }
+
+  .hero__content {
+    padding-bottom: 8rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 18vw, 8rem);
+    max-width: min(calc(100vw - (var(--gutter) * 2)), 8.6ch);
+  }
+
+  .hero__claim {
+    max-width: 22rem;
+  }
+
+  .hero__footer {
+    font-size: clamp(0.64rem, 2.15vw, 0.82rem);
+  }
+}
+
+/* Mailantarki: one long brand word, six districts, project names of any length. */
+.hero.hero--brand h1 {
+  font-size: clamp(3rem, 10vw, 12rem);
+  max-width: none;
+  white-space: nowrap;
+}
+
+.hero__footer--many {
+  gap: var(--space-sm);
+}
+
+.hero.hero--project h1 {
+  font-size: clamp(3.4rem, 7.2vw, 8.6rem);
+  line-height: 0.9;
+  max-width: min(calc(100vw - (var(--gutter) * 2)), 14ch);
+  text-wrap: balance;
+}
+
+.hero--project .hero__claim {
+  max-width: 32rem;
+}
+
+@media (max-width: 768px) {
+  .hero.hero--brand h1 {
+    font-size: clamp(2.4rem, 11.4vw, 6rem);
+    max-width: none;
+  }
+
+  .hero__footer--many {
+    display: grid;
+    gap: 0.4rem var(--space-sm);
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .hero.hero--project h1 {
+    font-size: clamp(2.9rem, 12vw, 5.4rem);
+    max-width: min(calc(100vw - (var(--gutter) * 2)), 12ch);
+  }
+
+  .hero--project .hero__footer {
+    display: grid;
+    gap: 0.4rem var(--space-sm);
+    grid-template-columns: repeat(2, auto);
+  }
+}

@@ -1,0 +1,227 @@
+.mobile-nav-toggle {
+  background: rgb(245 242 237 / 0.1);
+  border: 1px solid rgb(245 242 237 / 0.5);
+  display: none;
+  height: 2.35rem;
+  place-items: center;
+  position: relative;
+  width: 2.35rem;
+}
+
+.mobile-nav-toggle span {
+  background: currentColor;
+  height: 1px;
+  position: absolute;
+  transition: transform var(--duration-fast) var(--ease-out);
+  width: 1rem;
+}
+
+.mobile-nav-toggle span:first-child {
+  transform: translateY(-0.22rem);
+}
+
+.mobile-nav-toggle span:last-child {
+  transform: translateY(0.22rem);
+}
+
+.mobile-nav-toggle[aria-expanded="true"] span:first-child {
+  transform: rotate(45deg);
+}
+
+.mobile-nav-toggle[aria-expanded="true"] span:last-child {
+  transform: rotate(-45deg);
+}
+
+.mobile-nav-panel {
+  background: rgb(36 36 36 / 0.96);
+  border-top: 1px solid rgb(245 242 237 / 0.14);
+  color: var(--color-paper);
+  display: none;
+  gap: 1px;
+  inset: var(--header-height) 0 auto;
+  padding: 0 var(--gutter) var(--space-sm);
+  position: fixed;
+  z-index: -1;
+}
+
+.mobile-nav-panel a {
+  border-bottom: 1px solid rgb(245 242 237 / 0.14);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.9rem 0;
+}
+
+@media (max-width: 1180px) {
+  .overview__title {
+    grid-column: 3 / 13;
+  }
+
+  .overview__copy {
+    grid-column: 3 / 8;
+  }
+
+  .chapter__text {
+    grid-column: 1 / 6;
+  }
+
+  .chapter--signature .chapter__image--large {
+    grid-column: 6 / 11;
+  }
+
+  .signature-program {
+    grid-column: 1 / -1;
+  }
+
+  .residences-gallery {
+    grid-column: 6 / 13;
+    grid-template-columns: 1fr;
+  }
+
+  .villas__header {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 920px) {
+  .nav,
+  .site-header__contact {
+    display: none;
+  }
+
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .mobile-nav-toggle {
+    display: grid;
+  }
+
+  .mobile-nav-panel.is-open {
+    display: grid;
+  }
+}
+
+@media (max-width: 820px) {
+  :root {
+    --header-height: 4.25rem;
+    --space-2xl: 4rem;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .site-header__actions .button {
+    min-height: 2.1rem;
+    padding: 0.5rem 0.62rem;
+  }
+
+  .hero {
+    min-height: 100dvh;
+  }
+
+  .hero__content {
+    height: auto;
+  }
+
+  .metrics,
+  .master-plan__grid,
+  .master-plan__visual,
+  .layout-grid,
+  .chapter,
+  .villas__board,
+  .studio__surface,
+  .plot-diagram {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .metrics article {
+    min-height: 8.75rem;
+  }
+
+  .overview .section__index,
+  .overview__title,
+  .overview__copy,
+  .overview__image,
+  .chapter__text,
+  .chapter--signature .chapter__image--large,
+  .signature-program,
+  .master-plan__visual,
+  .residences-gallery,
+  .villas__hero,
+  .villas__details,
+  .plot-diagram,
+  .plot-diagram p,
+  .villas__copy,
+  .villas__image--kitchen,
+  .villas__image--social {
+    grid-column: 1;
+    margin-top: 0;
+  }
+
+  .chapter {
+    min-height: auto;
+  }
+
+  .chapter__text {
+    position: static;
+  }
+
+  .chapter--signature .chapter__image--large {
+    aspect-ratio: 16 / 10;
+    grid-row: auto;
+    min-height: 0;
+  }
+
+  .chapter--signature .chapter__text--panel,
+  .signature-program {
+    grid-row: auto;
+  }
+
+  .signature-program__gallery,
+  .signature-program figure,
+  .residences-gallery figure:last-child,
+  .villas__image--social {
+    aspect-ratio: 16 / 10;
+  }
+
+  .plan-marker {
+    min-width: 7.25rem;
+    padding: 0.55rem 0.65rem;
+  }
+
+  .plan-marker strong {
+    font-size: clamp(1.25rem, 2.6vw, 1.65rem);
+  }
+
+  .contact__links a {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --gutter: clamp(0.9rem, 4.8vw, 1.25rem);
+    --space-xl: 3rem;
+    --space-2xl: 3.5rem;
+  }
+
+  .section {
+    padding-inline: var(--gutter);
+  }
+
+  .mobile-nav-panel a {
+    font-size: clamp(1.65rem, 9vw, 2.35rem);
+  }
+
+  .hero__meta,
+  .hero__footer {
+    font-size: clamp(0.62rem, 2.1vw, 0.82rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(3.25rem, 17vw, 6.25rem);
+  }
+}

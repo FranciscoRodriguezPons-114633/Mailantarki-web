@@ -1,0 +1,28 @@
+.section {
+  padding: var(--space-2xl) var(--gutter);
+  scroll-margin-top: var(--header-height);
+}
+
+.layout-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-inline: auto;
+  max-width: var(--container);
+}
+
+.section__index {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.image-caption {
+  background: rgb(8 8 7 / 0.58);
+  bottom: var(--space-sm);
+  color: var(--color-paper);
+  left: var(--space-sm);
+  max-width: calc(100% - var(--space-lg));
+  padding: 0.5rem 0.66rem;
+  position: absolute;
+  z-index: 2;
+}

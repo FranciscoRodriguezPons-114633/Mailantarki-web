@@ -1,0 +1,142 @@
+/* Mailantarki / Contact form: same dark contact block, lines and mono labels. */
+.contact__intro .contact__links {
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+.contact-form {
+  display: grid;
+  gap: var(--space-md) clamp(1rem, 2.5vw, 2rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-form__field {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.contact-form__field--project,
+.contact-form__field--full,
+.contact-form__footer {
+  grid-column: 1 / -1;
+}
+
+.contact-form label {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: clamp(0.82rem, 0.74rem + 0.22vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.contact-form label small {
+  color: var(--color-stone);
+  font-size: inherit;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgb(245 242 237 / 0.32);
+  border-radius: 0;
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.35vw, 1.22rem);
+  line-height: 1.5;
+  min-height: 2.75rem;
+  padding: 0.35rem 0;
+  transition: border-color var(--duration-fast) var(--ease-out);
+  width: 100%;
+}
+
+.contact-form textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+/* The project selector is the key field: display type, custom arrow. */
+.contact-form select {
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-accent) 50%),
+    linear-gradient(135deg, var(--color-accent) 50%, transparent 50%);
+  background-position: calc(100% - 0.9rem) 55%, calc(100% - 0.55rem) 55%;
+  background-repeat: no-repeat;
+  background-size: 0.35rem 0.35rem;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 1.9vw, 1.9rem);
+  padding-right: 2rem;
+  text-overflow: ellipsis;
+}
+
+.contact-form select option {
+  background: var(--color-night);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.contact-form input:hover,
+.contact-form select:hover,
+.contact-form textarea:hover {
+  border-color: rgb(245 242 237 / 0.6);
+}
+
+.contact-form input:focus-visible,
+.contact-form select:focus-visible,
+.contact-form textarea:focus-visible {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.contact-form.was-validated :invalid {
+  border-color: #c9492d;
+}
+
+.contact-form__footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  padding-top: var(--space-xs);
+}
+
+.contact-form .button {
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 2.9rem;
+  padding-inline: 1.4rem;
+}
+
+.contact-form__status {
+  color: var(--color-stone);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  max-width: 34rem;
+  text-transform: uppercase;
+}
+
+.contact-form__status[data-state="error"] {
+  color: #e07a5f;
+}
+
+.contact-form__status[data-state="preview"] {
+  color: var(--color-accent);
+}
+
+@media (max-width: 560px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form .button {
+    width: 100%;
+  }
+}

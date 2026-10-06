@@ -1,0 +1,42 @@
+/*
+ * Mailantarki / Placeholders (development aid).
+ * - .is-placeholder: an image frame whose file does not exist yet; shows the
+ *   expected path from js/data/projects.js.
+ * - .todo: text still marked "TODO" in the data file.
+ * Both disappear on their own once the real image / text is in place.
+ */
+.is-placeholder {
+  background:
+    repeating-linear-gradient(135deg, rgb(173 147 101 / 0.16) 0 1px, transparent 1px 14px),
+    var(--color-ink) !important;
+}
+
+.is-placeholder > img {
+  visibility: hidden;
+}
+
+.is-placeholder::before {
+  color: var(--color-accent);
+  content: "IMAGE / " attr(data-placeholder);
+  font-family: var(--font-mono);
+  font-size: clamp(0.68rem, 0.62rem + 0.2vw, 0.82rem);
+  font-weight: 600;
+  inset: 50% var(--space-sm) auto;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.hero__media.is-placeholder::before {
+  inset: 34% var(--gutter) auto;
+}
+
+.show-todos .todo {
+  background: rgb(173 147 101 / 0.16);
+  outline: 1px dashed var(--color-accent);
+  outline-offset: 2px;
+}

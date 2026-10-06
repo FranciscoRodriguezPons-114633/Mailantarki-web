@@ -1,0 +1,31 @@
+:root {
+  --color-paper: #f5f2ed;
+  --color-warm-white: #f5f2ed;
+  --color-muted: #7f7667;
+  --color-ink: #242424;
+  --color-charcoal: #242424;
+  --color-accent: #ad9365;
+  --color-gold: #ad9365;
+  --color-gold-dark: #8c734b;
+  --color-stone: color-mix(in srgb, var(--color-paper) 76%, var(--color-muted));
+  --color-mist: color-mix(in srgb, var(--color-paper) 90%, white);
+  --color-night: #181815;
+  --color-white: #fff;
+  --font-display: "Cinzel", "Didot", serif;
+  --font-body: "Helvetica Neue", "Avenir Next", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", "Roboto Mono", monospace;
+  --gutter: clamp(1rem, 3vw, 2.5rem);
+  --container: 94rem;
+  --header-height: 4.5rem;
+  --space-xs: 0.625rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 7rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.86, 0, 0.07, 1);
+  --duration-fast: 220ms;
+  --duration-medium: 520ms;
+  --duration-slow: 920ms;
+}

@@ -1,0 +1,373 @@
+.overview {
+  background: linear-gradient(180deg, var(--color-paper), var(--color-mist));
+  padding-top: calc(var(--header-height) + clamp(3.5rem, 7vw, 6rem));
+}
+
+.overview .section__index {
+  grid-column: 1 / 3;
+}
+
+.overview__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  grid-column: 4 / 11;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.overview__copy {
+  display: grid;
+  gap: var(--space-md);
+  grid-column: 4 / 8;
+}
+
+.overview__image {
+  --overview-image-pad: clamp(0.55rem, 1vw, 0.9rem);
+  aspect-ratio: 16 / 9;
+  background: rgb(36 35 32 / 0.05);
+  box-sizing: border-box;
+  grid-column: 8 / 13;
+  overflow: hidden;
+  padding: var(--overview-image-pad);
+  position: relative;
+}
+
+.overview__image::after {
+  border: 1px solid rgb(36 35 32 / 0.1);
+  content: "";
+  inset: var(--overview-image-pad);
+  pointer-events: none;
+  position: absolute;
+}
+
+.overview__image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.overview__image .image-caption {
+  bottom: calc(var(--space-sm) + var(--overview-image-pad));
+  left: calc(var(--space-sm) + var(--overview-image-pad));
+}
+
+.master-plan {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Segment 2 / Master plan: technical figure plus lateral legend. */
+.master-plan__grid {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-inline: auto;
+  max-width: var(--container);
+}
+
+.master-plan__copy {
+  align-content: end;
+  display: grid;
+  gap: var(--space-md);
+  grid-column: 1 / 5;
+}
+
+.master-plan__copy h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.96;
+  text-wrap: balance;
+}
+
+.master-plan__copy p:not(.section__index) {
+  color: var(--color-stone);
+}
+
+.master-plan__copy .section__index {
+  color: var(--color-accent);
+  font-size: clamp(0.82rem, 0.74rem + 0.22vw, 0.95rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.master-plan__visual {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  grid-column: 5 / 13;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.28fr);
+}
+
+.master-plan__diagram {
+  aspect-ratio: 16 / 9;
+  background: var(--color-night);
+  overflow: hidden;
+  position: relative;
+}
+
+.master-plan__diagram img {
+  opacity: 0.72;
+  transform: scale(1.02);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.master-plan__diagram > img {
+  transition: transform 700ms var(--ease-out), filter 700ms var(--ease-out);
+}
+
+.master-plan__visual.is-visible .master-plan__diagram > img {
+  transform: scale(1);
+}
+
+/*
+ * Mailantarki: generic version of the per-area zooms. Map image and pins share
+ * a canvas, so the pins stay registered on the map while it scales toward the
+ * focused pin.
+ */
+.master-plan__canvas {
+  inset: 0;
+  position: absolute;
+  transform-origin: var(--focus-x, 50%) var(--focus-y, 50%);
+  transition: transform 700ms var(--ease-out);
+}
+
+.master-plan__canvas > img {
+  opacity: 0.72;
+  transition: transform 700ms var(--ease-out), filter 700ms var(--ease-out);
+}
+
+.master-plan__visual.is-visible .master-plan__canvas > img {
+  transform: scale(1);
+}
+
+.master-plan__visual .master-plan__diagram.is-focused .master-plan__canvas {
+  transform: scale(1.07);
+}
+
+.master-plan__diagram.is-focused .master-plan__canvas > img {
+  filter: brightness(0.92);
+}
+
+.plan-marker {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgb(245 242 237 / 0.24);
+  color: var(--color-paper);
+  cursor: pointer;
+  display: grid;
+  gap: 0.18rem;
+  min-width: 0;
+  padding: 0.75rem 0;
+  position: relative;
+  text-align: left;
+  transition: opacity var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+  width: 100%;
+}
+
+.plan-marker span {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.plan-marker strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.plan-marker p {
+  color: var(--color-stone);
+  font-size: clamp(1.05rem, 0.98rem + 0.2vw, 1.15rem);
+  line-height: 1.5;
+  max-width: 18rem;
+}
+
+.hotspot {
+  background: var(--color-accent);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgb(173 147 101 / 0.45);
+  cursor: pointer;
+  height: 1.15rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
+  width: 1.15rem;
+  z-index: 3;
+}
+
+.hotspot::after {
+  border: 1px solid rgb(245 242 237 / 0.72);
+  border-radius: 50%;
+  content: "";
+  inset: -0.55rem;
+  position: absolute;
+}
+
+.hotspot:hover,
+.hotspot.is-active {
+  box-shadow: 0 0 0 0.75rem rgb(173 147 101 / 0.22);
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.plan-marker.is-active {
+  border-color: var(--color-accent);
+  opacity: 1;
+  transform: translateY(-0.35rem);
+  z-index: 4;
+}
+
+/* Mailantarki: pins and legend items are links to each project page. */
+a.hotspot {
+  display: block;
+}
+
+.hotspot__label {
+  color: var(--color-paper);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  transform: translate(-50%, -0.2rem);
+  transition: opacity var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+}
+
+.hotspot.is-active .hotspot__label,
+.hotspot.is-current .hotspot__label {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.master-plan__diagram[data-active-pin]:not([data-active-pin=""]) .hotspot:not(.is-current) {
+  opacity: 0.55;
+}
+
+.master-plan__diagram[data-active-pin]:not([data-active-pin=""]) .hotspot.is-active {
+  opacity: 1;
+}
+
+.master-plan__legend .plan-marker {
+  align-content: start;
+  gap: 0.35rem;
+  padding: 0.6rem 0;
+}
+
+.master-plan__legend .plan-marker strong {
+  font-size: clamp(1.25rem, 1.45vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.plan-marker.is-current {
+  border-color: var(--color-accent);
+}
+
+.plan-marker.is-current strong::after {
+  color: var(--color-accent);
+  content: " /";
+}
+
+.master-plan__legend {
+  align-self: stretch;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 820px) {
+  .overview__title {
+    font-size: clamp(2.35rem, 10vw, 4.1rem);
+    line-height: 1.03;
+  }
+
+  .overview__copy {
+    gap: var(--space-sm);
+  }
+
+  .overview__image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .master-plan__grid {
+    gap: var(--space-lg);
+  }
+
+  .master-plan__copy h2 {
+    font-size: clamp(2.5rem, 12vw, 4.8rem);
+    line-height: 0.96;
+  }
+
+  .master-plan__visual {
+    gap: var(--space-md);
+  }
+
+  .master-plan__legend {
+    gap: 0;
+  }
+
+  .plan-marker {
+    padding: 0.9rem 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .overview {
+    padding-top: calc(var(--header-height) + clamp(2.5rem, 10vw, 4rem));
+  }
+
+  .overview__title {
+    font-size: clamp(2.05rem, 10.5vw, 3.2rem);
+    line-height: 1.06;
+  }
+
+  .overview__image {
+    aspect-ratio: 1 / 1;
+  }
+
+  .master-plan__diagram {
+    aspect-ratio: 1 / 1;
+  }
+
+  .plan-marker strong {
+    font-size: clamp(1.55rem, 8vw, 2.15rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .master-plan__copy,
+  .master-plan__visual {
+    grid-column: 1 / -1;
+  }
+
+  .master-plan__visual {
+    grid-template-columns: 1fr;
+  }
+
+  .master-plan__legend {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .master-plan__legend {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mailantarki: pins stay visible on mobile (smaller), the legend does the navigation. */
+  .hotspot {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+
+  .hotspot::after {
+    inset: -0.35rem;
+  }
+}
