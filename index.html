@@ -25,6 +25,14 @@
     />
     <meta name="twitter:image" content="assets/images/brand/hero.jpg" />
     <title>MAILANTARKI / RODRIGUEZ PONS Architects</title>
+    <!-- Preloader only on the first page of a visit (see js/modules/preloader.js) -->
+    <script>
+      try {
+        if (sessionStorage.getItem("mailantarki-intro-seen")) {
+          document.documentElement.classList.add("skip-preloader");
+        }
+      } catch (error) {}
+    </script>
     <link rel="stylesheet" href="css/styles.css?v=20261006" />
     <script type="module" src="js/main.js"></script>
   </head>
