@@ -162,10 +162,10 @@ export const projects = [
     ],
   },
   {
-    id: "maylan-heights-life-camp",
+    id: "maylan-heights-residences",
     // Texts and amenities: "MAYLAN HEIGHTS - Info" (Rodriguez Pons / Architects).
     number: "02",
-    name: "Maylan Heights Residences Life Camp",
+    name: "Maylan Heights Residences",
     location: {
       district: "Dape",
       city: "Abuja",
@@ -207,40 +207,40 @@ export const projects = [
       "Secure, well-planned environment",
     ],
     cover: {
-      src: "assets/images/projects/maylan-heights-life-camp/gallery-01.jpg",
+      src: "assets/images/projects/maylan-heights-residences/gallery-01.jpg",
       alt: "Night view of the Maylan Heights gated entrance with illuminated signage",
     },
     gallery: [
       {
-        src: "assets/images/projects/maylan-heights-life-camp/gallery-01.jpg",
+        src: "assets/images/projects/maylan-heights-residences/gallery-01.jpg",
         alt: "Night view of the Maylan Heights gated entrance with illuminated signage",
         caption: "Entrance / Gated arrival at night",
       },
       {
-        src: "assets/images/projects/maylan-heights-life-camp/gallery-02.jpg",
+        src: "assets/images/projects/maylan-heights-residences/gallery-02.jpg",
         alt: "Three-storey house with stone and timber facade, terraces and parking at dusk",
         caption: "Phoenix / House facade at dusk",
       },
       {
-        src: "assets/images/projects/maylan-heights-life-camp/gallery-03.jpg",
+        src: "assets/images/projects/maylan-heights-residences/gallery-03.jpg",
         alt: "Row of three-storey terraced houses with white balconies and parking",
         caption: "Terraces / Townhouse frontage",
       },
       {
-        src: "assets/images/projects/maylan-heights-life-camp/gallery-04.jpg",
+        src: "assets/images/projects/maylan-heights-residences/gallery-04.jpg",
         alt: "Mixed-use commercial complex with glazed upper floors, ground-floor retail and street frontage",
         caption: "The Complex / Commercial and lifestyle frontage",
       },
     ],
     plans: [
       {
-        src: "assets/images/projects/maylan-heights-life-camp/plan-01.jpg",
-        alt: "TODO: describe plan 1 of Maylan Heights Residences Life Camp",
+        src: "assets/images/projects/maylan-heights-residences/plan-01.jpg",
+        alt: "TODO: describe plan 1 of Maylan Heights Residences",
         caption: "TODO: plan 01 / level or typology",
       },
       {
-        src: "assets/images/projects/maylan-heights-life-camp/plan-02.jpg",
-        alt: "TODO: describe plan 2 of Maylan Heights Residences Life Camp",
+        src: "assets/images/projects/maylan-heights-residences/plan-02.jpg",
+        alt: "TODO: describe plan 2 of Maylan Heights Residences",
         caption: "TODO: plan 02 / level or typology",
       },
     ],

@@ -94,17 +94,17 @@ Las fotos de `Desktop/aa1_fotos Mailantarki` (carpetas A a F) están copiadas y 
 | Plano 1 | `assets/images/projects/maylan-plaza/plan-01.jpg` | **falta** |
 | Plano 2 | `assets/images/projects/maylan-plaza/plan-02.jpg` | **falta** |
 
-### 02 / Maylan Heights Residences Life Camp / Dape
+### 02 / Maylan Heights Residences / Dape
 
 | Uso | Ruta | Estado |
 |---|---|---|
-| Portada (hero + tarjeta) | `assets/images/projects/maylan-heights-life-camp/gallery-01.jpg` | cargada |
-| Galería 1 | `assets/images/projects/maylan-heights-life-camp/gallery-01.jpg` | cargada |
-| Galería 2 | `assets/images/projects/maylan-heights-life-camp/gallery-02.jpg` | cargada |
-| Galería 3 | `assets/images/projects/maylan-heights-life-camp/gallery-03.jpg` | cargada |
-| Galería 4 | `assets/images/projects/maylan-heights-life-camp/gallery-04.jpg` | cargada |
-| Plano 1 | `assets/images/projects/maylan-heights-life-camp/plan-01.jpg` | **falta** |
-| Plano 2 | `assets/images/projects/maylan-heights-life-camp/plan-02.jpg` | **falta** |
+| Portada (hero + tarjeta) | `assets/images/projects/maylan-heights-residences/gallery-01.jpg` | cargada |
+| Galería 1 | `assets/images/projects/maylan-heights-residences/gallery-01.jpg` | cargada |
+| Galería 2 | `assets/images/projects/maylan-heights-residences/gallery-02.jpg` | cargada |
+| Galería 3 | `assets/images/projects/maylan-heights-residences/gallery-03.jpg` | cargada |
+| Galería 4 | `assets/images/projects/maylan-heights-residences/gallery-04.jpg` | cargada |
+| Plano 1 | `assets/images/projects/maylan-heights-residences/plan-01.jpg` | **falta** |
+| Plano 2 | `assets/images/projects/maylan-heights-residences/plan-02.jpg` | **falta** |
 
 ### 03 / Mailantarki Sports Complex / Dakibiyu
 
