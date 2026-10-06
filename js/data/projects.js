@@ -463,11 +463,6 @@ export const projects = [
     },
     gallery: [
       {
-        src: "assets/images/projects/daige-residences/gallery-01.jpg",
-        alt: "Aerial view of the Daige Residences estate with apartment blocks, terraced houses and a central amenity",
-        caption: "Aerial / Estate master plan",
-      },
-      {
         src: "assets/images/projects/daige-residences/gallery-02.jpg",
         alt: "Street view of a four-storey apartment block with balconies and landscaped frontage",
         caption: "Street view / Apartment block",
@@ -476,6 +471,11 @@ export const projects = [
         src: "assets/images/projects/daige-residences/gallery-03.jpg",
         alt: "Four-storey apartment block with dark framing volumes and warm-lit balconies",
         caption: "Apartment block / Facade and balconies",
+      },
+      {
+        src: "assets/images/projects/daige-residences/gallery-01.jpg",
+        alt: "Aerial view of the Daige Residences estate with apartment blocks, terraced houses and a central amenity",
+        caption: "Aerial / Estate master plan",
       },
       {
         src: "assets/images/projects/daige-residences/gallery-04.jpg",
