@@ -101,8 +101,8 @@ export const mapVisual = ({ map, projects, activeId = "" }) => {
 export const specRows = (project) => [
   ["Area", project.specs.area],
   ["Units", project.specs.units],
+  ["GFA", project.specs.gfa],
   ["Status", project.specs.status],
-  ["Delivery", project.specs.delivery],
   ["Location", districtLabel(project)],
 ];
 
@@ -178,8 +178,8 @@ export const projectCard = (project, { headingLevel = 3 } = {}) => `
         <h${headingLevel} class="project-card__title">${esc(project.name)}</h${headingLevel}>
         <p>${txt(project.shortDescription)}</p>
         <dl class="project-card__facts">
+          <div><dt>GFA</dt><dd>${txt(project.specs.gfa)}</dd></div>
           <div><dt>Status</dt><dd>${txt(project.specs.status)}</dd></div>
-          <div><dt>Delivery</dt><dd>${txt(project.specs.delivery)}</dd></div>
         </dl>
         <span class="text-cta">View project</span>
       </div>

@@ -111,9 +111,9 @@ export const projects = [
     ],
     specs: {
       area: "5,000 m² GFA / 1,750 m² site",
+      gfa: "5,000 m²", // Concept Design Report 01
       units: "TODO: units",
-      status: "TODO: construction status",
-      delivery: "TODO: delivery date",
+      status: "Under Construction",
     },
     amenities: [
       "Supermarket",
@@ -179,9 +179,9 @@ export const projects = [
     ],
     specs: {
       area: "TODO: m²",
+      gfa: "10,000 m²",
       units: "TODO: units",
-      status: "TODO: construction status",
-      delivery: "TODO: delivery date",
+      status: "Under Construction",
     },
     // Optional: short labelled notes shown in the technical sheet chapter.
     highlights: [
@@ -263,9 +263,9 @@ export const projects = [
     ],
     specs: {
       area: "18,723 m² BUA / 112,078 m² plot",
+      gfa: "18,723 m²", // total built-up area (BUA), Report 02
       units: "TODO: units",
-      status: "TODO: construction status",
-      delivery: "TODO: delivery date",
+      status: "Under Construction",
     },
     amenities: [
       "Football fields and sports courts",
@@ -322,9 +322,9 @@ export const projects = [
     ],
     specs: {
       area: "TODO: m²",
+      gfa: "10,000 m²",
       units: "16 apartments",
-      status: "TODO: construction status",
-      delivery: "TODO: delivery date",
+      status: "Under Construction",
     },
     // Level by level layout, shown as notes in the technical sheet chapter.
     highlights: [
@@ -409,9 +409,9 @@ export const projects = [
     ],
     specs: {
       area: "TODO: m²",
+      gfa: "10,000 m²",
       units: "TODO: units",
-      status: "TODO: construction status",
-      delivery: "TODO: delivery date",
+      status: "Under Construction",
     },
     amenities: [
       "TODO: amenity 01",
@@ -474,9 +474,9 @@ export const projects = [
     ],
     specs: {
       area: "TODO: m²",
+      gfa: "10,000 m²",
       units: "TODO: units",
-      status: "TODO: construction status",
-      delivery: "TODO: delivery date",
+      status: "Under Construction",
     },
     amenities: [
       "TODO: amenity 01",

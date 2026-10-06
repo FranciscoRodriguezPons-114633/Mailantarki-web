@@ -60,7 +60,7 @@ assets/images/                      vacía: acá van las imágenes
 - `coordinates.lat` / `coordinates.lng`
 - `shortDescription`: 1 frase.
 - `longDescription`: párrafos.
-- `specs.area` / `specs.units` / `specs.status` / `specs.delivery`
+- `specs.area` / `specs.units` (`specs.status` = Under Construction en todos; `specs.gfa` = 10,000 m² provisorio salvo Maylan Plaza y Sports Complex, que tienen el dato de sus informes)
 - `amenities`: la cantidad que quieras.
 - `highlights` (opcional): notas con título que aparecen en el capítulo de ficha técnica (hoy en Maylan Heights y Mauritius).
 - `alt` y `caption` de la portada, la galería y los planos (ya completos en los 4 proyectos con fotos, salvo los planos pendientes).

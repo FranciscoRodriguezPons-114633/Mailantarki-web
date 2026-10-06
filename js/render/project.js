@@ -69,8 +69,8 @@ export function renderProject({ site, projects, root }) {
       <div class="hero__footer" data-reveal>
         <span>Project ${esc(project.number)} / ${String(projects.length).padStart(2, "0")}</span>
         <span>${esc(project.location.district)}</span>
+        <span>GFA ${txt(project.specs.gfa)}</span>
         <span>${txt(project.specs.status)}</span>
-        <span>${txt(project.specs.delivery)}</span>
       </div>
     </section>
 
