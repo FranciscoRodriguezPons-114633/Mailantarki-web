@@ -106,13 +106,79 @@
 }
 
 /* Header: link back to the home on project pages. */
-.nav .nav__back {
-  color: var(--color-accent);
-  opacity: 1;
+/* Back to all projects: square outline control, same family as the mobile
+   menu toggle (1px paper line, translucent fill), with a drawn arrow. */
+.site-header__lead {
+  align-items: center;
+  display: flex;
+  gap: var(--space-sm);
+  min-width: 0;
 }
 
-.nav .nav__back::before {
-  content: "<- ";
+.back-link {
+  background: rgb(245 242 237 / 0.06);
+  border: 1px solid rgb(245 242 237 / 0.4);
+  display: grid;
+  flex: none;
+  height: 2.35rem;
+  place-items: center;
+  position: relative;
+  transition: background var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out);
+  width: 2.35rem;
+}
+
+.back-link__arrow {
+  height: 0.6rem;
+  position: relative;
+  transition: transform var(--duration-medium) var(--ease-out);
+  width: 1rem;
+}
+
+.back-link__arrow::before,
+.back-link__arrow::after {
+  content: "";
+  left: 0;
+  position: absolute;
+}
+
+/* shaft */
+.back-link__arrow::before {
+  background: currentColor;
+  height: 1px;
+  top: 50%;
+  width: 100%;
+}
+
+/* head */
+.back-link__arrow::after {
+  border-bottom: 1px solid currentColor;
+  border-left: 1px solid currentColor;
+  height: 0.42rem;
+  top: 50%;
+  transform: translate(0.06rem, -50%) rotate(45deg);
+  width: 0.42rem;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  background: rgb(173 147 101 / 0.14);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.back-link:hover .back-link__arrow,
+.back-link:focus-visible .back-link__arrow {
+  transform: translateX(-0.18rem);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .site-header__brand span:last-child {

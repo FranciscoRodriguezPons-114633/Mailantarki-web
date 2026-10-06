@@ -5,7 +5,7 @@ Landing de los 6 proyectos Mailantarki en Abuja. Usa el mismo stack y la misma o
 ## Cómo funciona
 
 - `index.html` (home): Hero / 01 Overview / 02 Mapa con 6 pines / 03 Projects (6 tarjetas) / 04 Studio / 05 Contact.
-- `project.html?id=<id-del-proyecto>`: una sola plantilla para los 6 proyectos. Hero / 01 Overview / 02 Ficha técnica + galería / 03 Planos / 04 Amenities / 05 Location / 06 Otros proyectos / 07 Contact.
+- `project.html?id=<id-del-proyecto>`: una sola plantilla para los 6 proyectos. Hero / 01 Overview / 02 Ficha técnica + galería / 03 Planos / 04 Amenities / 05 Otros proyectos / 06 Contact. El mapa con los 6 pines está solo en la home.
 - **Todo el contenido y todas las rutas de imágenes están en `js/data/projects.js`.** `js/render/*.js` convierte esos datos en el mismo markup y las mismas clases de ONE MAITAMA. Después corren los módulos JS originales (reveal, carruseles, nav, menú mobile).
 - Contacto: `index.html?project=<id>#contact` preselecciona un proyecto en el formulario. En cada página de proyecto, ese proyecto ya viene seleccionado.
 
@@ -33,7 +33,7 @@ css/styles.css                      imports (mismo orden que ONE MAITAMA)
 css/base, css/layout                copiados sin cambios
 css/components/                     componentes de ONE MAITAMA + nuevos:
   projects-grid.css                 tarjetas de proyecto (home + "More projects")
-  project-page.css                  amenities, location, header de proyecto
+  project-page.css                  amenities, header de proyecto
   contact-form.css                  formulario con selector de proyecto
   placeholders.css                  marcas TODO e imágenes faltantes
 js/main.js                          render + init

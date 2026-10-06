@@ -4,7 +4,6 @@ import {
   esc,
   img,
   isTodo,
-  mapVisual,
   productChapter,
   projectCard,
   projectUrl,
@@ -48,8 +47,6 @@ export function renderProject({ site, projects, root }) {
   const project = projects[index];
   const next = projects[(index + 1) % projects.length];
   const others = projects.filter((item) => item.id !== project.id);
-  const { lat, lng } = project.coordinates;
-  const hasCoordinates = typeof lat === "number" && typeof lng === "number";
 
   updateDocumentMeta(site, project);
 
@@ -136,34 +133,9 @@ export function renderProject({ site, projects, root }) {
       </div>
     </section>
 
-    <section class="section master-plan master-plan--location" id="location" aria-labelledby="location-title">
-      <div class="master-plan__grid">
-        <div class="master-plan__copy" data-reveal>
-          <p class="section__index">05 / Location</p>
-          <h2 id="location-title">${esc(project.location.district)}, ${esc(project.location.city)}</h2>
-          <p>
-            ${esc(project.name)} sits in ${esc(project.location.district)}. The map shows its
-            position within the ${projects.length} ${esc(site.name)} addresses across ${esc(site.city)}.
-          </p>
-          <dl class="location__facts">
-            <div>
-              <dt>Coordinates</dt>
-              <dd>${hasCoordinates ? `${lat.toFixed(5)}, ${lng.toFixed(5)}` : txt("TODO: coordinates")}</dd>
-            </div>
-            ${
-              hasCoordinates
-                ? `<div><dt>Directions</dt><dd><a class="text-cta" href="https://www.google.com/maps/search/?api=1&query=${lat},${lng}" target="_blank" rel="noopener">Open in Google Maps</a></dd></div>`
-                : ""
-            }
-          </dl>
-        </div>
-        ${mapVisual({ map: site.map, projects, activeId: project.id })}
-      </div>
-    </section>
-
     <section class="section projects projects--more" id="more" aria-labelledby="more-title">
       <div class="projects__header" data-reveal>
-        <p class="section__index">06 / More projects</p>
+        <p class="section__index">05 / More projects</p>
         <h2 id="more-title">
           Next: <a href="${projectUrl(next.id)}">${esc(next.name)}</a>
         </h2>
@@ -176,7 +148,7 @@ export function renderProject({ site, projects, root }) {
     ${contactSection({
       site,
       projects,
-      index: "07",
+      index: "06",
       context: `${esc(project.name)} / ${esc(districtLabel(project))}`,
       selectedId: project.id,
     })}
