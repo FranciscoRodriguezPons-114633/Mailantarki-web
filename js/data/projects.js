@@ -163,6 +163,7 @@ export const projects = [
   },
   {
     id: "maylan-heights-life-camp",
+    // Texts and amenities: "MAYLAN HEIGHTS - Info" (Rodriguez Pons / Architects).
     number: "02",
     name: "Maylan Heights Residences Life Camp",
     location: {
@@ -171,10 +172,10 @@ export const projects = [
     },
     // Exact site coordinates (decimal degrees). Pins are hidden until both are set.
     coordinates: { lat: null, lng: null }, // TODO: coordinates
-    shortDescription: "TODO: short description of Maylan Heights Residences Life Camp (one sentence).",
+    shortDescription: "A mixed-use development in Dape combining premium residences, integrated commercial spaces and modern infrastructure within a secure, well-planned environment.",
     longDescription: [
-      "TODO: long description of Maylan Heights Residences Life Camp / paragraph 1.",
-      "TODO: long description of Maylan Heights Residences Life Camp / paragraph 2.",
+      "Maylan Heights is a thoughtfully curated mixed-use development created for individuals who value quality, convenience and long-term investment potential, positioned within the fast-growing Dape District of Abuja.",
+      "Every detail was designed to deliver a balanced lifestyle, one where contemporary architecture, accessibility, privacy and functionality exist seamlessly together.",
     ],
     specs: {
       area: "TODO: m²",
@@ -182,35 +183,53 @@ export const projects = [
       status: "TODO: construction status",
       delivery: "TODO: delivery date",
     },
+    // Optional: short labelled notes shown in the technical sheet chapter.
+    highlights: [
+      {
+        label: "The Complex",
+        text: "Integrated to complement the residential experience, the commercial spaces accommodate retail, wellness, dining, professional services and lifestyle-driven businesses, creating a vibrant ecosystem that supports modern urban living.",
+      },
+      {
+        label: "Strategically positioned",
+        text: "Located in Lifecamp, Maylan Heights offers a more private, residential alternative to the city’s denser districts, connected to key parts of the Federal Capital Territory through major road networks, within one of Abuja’s evolving growth corridors.",
+      },
+      {
+        label: "Everyday convenience",
+        text: "Commercial and lifestyle spaces are integrated into the masterplan so residents can access essential services within close proximity, while keeping the calm and privacy of the wider community.",
+      },
+    ],
     amenities: [
-      "TODO: amenity 01",
-      "TODO: amenity 02",
-      "TODO: amenity 03",
+      "Premium residences",
+      "Integrated commercial complex",
+      "Retail and dining",
+      "Wellness",
+      "Professional services",
+      "Secure, well-planned environment",
     ],
     cover: {
-      src: "assets/images/projects/maylan-heights-life-camp/cover.jpg",
-      alt: "TODO: describe the cover image of Maylan Heights Residences Life Camp",
+      src: "assets/images/projects/maylan-heights-life-camp/gallery-01.jpg",
+      alt: "Night view of the Maylan Heights gated entrance with illuminated signage",
     },
     gallery: [
       {
         src: "assets/images/projects/maylan-heights-life-camp/gallery-01.jpg",
-        alt: "TODO: describe image 1 of Maylan Heights Residences Life Camp",
-        caption: "TODO: caption / gallery 01",
+        alt: "Night view of the Maylan Heights gated entrance with illuminated signage",
+        caption: "Entrance / Gated arrival at night",
       },
       {
         src: "assets/images/projects/maylan-heights-life-camp/gallery-02.jpg",
-        alt: "TODO: describe image 2 of Maylan Heights Residences Life Camp",
-        caption: "TODO: caption / gallery 02",
+        alt: "Three-storey house with stone and timber facade, terraces and parking at dusk",
+        caption: "Phoenix / House facade at dusk",
       },
       {
         src: "assets/images/projects/maylan-heights-life-camp/gallery-03.jpg",
-        alt: "TODO: describe image 3 of Maylan Heights Residences Life Camp",
-        caption: "TODO: caption / gallery 03",
+        alt: "Row of three-storey terraced houses with white balconies and parking",
+        caption: "Terraces / Townhouse frontage",
       },
       {
         src: "assets/images/projects/maylan-heights-life-camp/gallery-04.jpg",
-        alt: "TODO: describe image 4 of Maylan Heights Residences Life Camp",
-        caption: "TODO: caption / gallery 04",
+        alt: "Mixed-use commercial complex with glazed upper floors, ground-floor retail and street frontage",
+        caption: "The Complex / Commercial and lifestyle frontage",
       },
     ],
     plans: [
@@ -287,6 +306,7 @@ export const projects = [
   },
   {
     id: "mauritius-sports-complex",
+    // Texts, units, highlights and amenities: "Mauritius Description.docx".
     number: "04",
     name: "Mauritius Sports Complex",
     location: {
@@ -295,21 +315,43 @@ export const projects = [
     },
     // Exact site coordinates (decimal degrees). Pins are hidden until both are set.
     coordinates: { lat: null, lng: null }, // TODO: coordinates
-    shortDescription: "TODO: short description of Mauritius Sports Complex (one sentence).",
+    shortDescription: "A nine-storey luxury apartment building of 16 residences overlooking the Mauritius Golf Course.",
     longDescription: [
-      "TODO: long description of Mauritius Sports Complex / paragraph 1.",
-      "TODO: long description of Mauritius Sports Complex / paragraph 2.",
+      "Large balconies wrap a low-rise, nine-storey building, and some of the units open onto private infinity pools. Interiors and exteriors are composed for comfort and views, immersed in a high-end golf green environment with good accessibility and connectivity.",
+      "The 16 apartments range from 3- and 4-bedroom units to 5-bedroom and 2-bedroom duplexes, above a ground floor with access, meeting room, gym and spa, and a basement with 59 parking places.",
     ],
     specs: {
       area: "TODO: m²",
-      units: "TODO: units",
+      units: "16 apartments",
       status: "TODO: construction status",
       delivery: "TODO: delivery date",
     },
+    // Level by level layout, shown as notes in the technical sheet chapter.
+    highlights: [
+      {
+        label: "Levels 1–2",
+        text: "Four 3-bedroom units and one 2-bedroom duplex.",
+      },
+      {
+        label: "Levels 3–6",
+        text: "Eight 4-bedroom units, two per floor.",
+      },
+      {
+        label: "Levels 7–8",
+        text: "Two 5-bedroom duplexes and one 2-bedroom duplex.",
+      },
+      {
+        label: "Ground, roof and basement",
+        text: "Access, meeting room, gym and spa at ground level; a roof terrace on the ninth floor; parking access and 59 parking places in the basement.",
+      },
+    ],
     amenities: [
-      "TODO: amenity 01",
-      "TODO: amenity 02",
-      "TODO: amenity 03",
+      "Gym and spa",
+      "Meeting room",
+      "Infinity pools in selected units",
+      "Roof terrace",
+      "Golf course views",
+      "59 parking places",
     ],
     cover: {
       src: "assets/images/projects/mauritius-sports-complex/gallery-03.jpg",
@@ -377,29 +419,29 @@ export const projects = [
       "TODO: amenity 03",
     ],
     cover: {
-      src: "assets/images/projects/daige-residences/gallery-01.jpg",
-      alt: "Hillside residence with infinity pool, white volumes and landscaped terraces",
+      src: "assets/images/projects/daige-residences/gallery-03.jpg",
+      alt: "Four-storey apartment block with dark framing volumes and warm-lit balconies",
     },
     gallery: [
       {
         src: "assets/images/projects/daige-residences/gallery-01.jpg",
-        alt: "Hillside residence with infinity pool, white volumes and landscaped terraces",
-        caption: "Exterior / Pool terrace over the landscape",
+        alt: "Aerial view of the Daige Residences estate with apartment blocks, terraced houses and a central amenity",
+        caption: "Aerial / Estate master plan",
       },
       {
         src: "assets/images/projects/daige-residences/gallery-02.jpg",
-        alt: "Arrival path to a residence with a dark stone volume at dusk",
-        caption: "Access / Arrival sequence at dusk",
+        alt: "Street view of a four-storey apartment block with balconies and landscaped frontage",
+        caption: "Street view / Apartment block",
       },
       {
         src: "assets/images/projects/daige-residences/gallery-03.jpg",
-        alt: "Open living area with bar, fireplace and glazing toward the pool and city",
-        caption: "Interior / Living toward the pool",
+        alt: "Four-storey apartment block with dark framing volumes and warm-lit balconies",
+        caption: "Apartment block / Facade and balconies",
       },
       {
         src: "assets/images/projects/daige-residences/gallery-04.jpg",
-        alt: "Evening gathering around the pool terrace",
-        caption: "Pool terrace / Evening social life",
+        alt: "Long three-storey residential block facing a landscaped lawn",
+        caption: "Residential block / Garden frontage",
       },
     ],
     plans: [
@@ -442,41 +484,31 @@ export const projects = [
       "TODO: amenity 03",
     ],
     cover: {
-      src: "assets/images/projects/daige-heights-apartments/cover.jpg",
-      alt: "TODO: describe the cover image of Daige Heights Apartments",
+      src: "assets/images/projects/daige-heights-apartments/gallery-01.jpg",
+      alt: "Corner view of a white three-storey apartment building with glass balconies",
     },
     gallery: [
       {
         src: "assets/images/projects/daige-heights-apartments/gallery-01.jpg",
-        alt: "TODO: describe image 1 of Daige Heights Apartments",
-        caption: "TODO: caption / gallery 01",
+        alt: "Corner view of a white three-storey apartment building with glass balconies",
+        caption: "Exterior / Corner view",
       },
       {
         src: "assets/images/projects/daige-heights-apartments/gallery-02.jpg",
-        alt: "TODO: describe image 2 of Daige Heights Apartments",
-        caption: "TODO: caption / gallery 02",
-      },
-      {
-        src: "assets/images/projects/daige-heights-apartments/gallery-03.jpg",
-        alt: "TODO: describe image 3 of Daige Heights Apartments",
-        caption: "TODO: caption / gallery 03",
-      },
-      {
-        src: "assets/images/projects/daige-heights-apartments/gallery-04.jpg",
-        alt: "TODO: describe image 4 of Daige Heights Apartments",
-        caption: "TODO: caption / gallery 04",
+        alt: "Front view of the symmetrical building with central white fin and carport",
+        caption: "Exterior / Main facade",
       },
     ],
     plans: [
       {
         src: "assets/images/projects/daige-heights-apartments/plan-01.jpg",
-        alt: "TODO: describe plan 1 of Daige Heights Apartments",
-        caption: "TODO: plan 01 / level or typology",
+        alt: "Rendered ground floor plan with four units, living areas and parking",
+        caption: "Ground floor / Living areas and parking",
       },
       {
         src: "assets/images/projects/daige-heights-apartments/plan-02.jpg",
-        alt: "TODO: describe plan 2 of Daige Heights Apartments",
-        caption: "TODO: plan 02 / level or typology",
+        alt: "Rendered upper floor plan with four units and bedrooms",
+        caption: "Upper floor / Bedrooms",
       },
     ],
   },

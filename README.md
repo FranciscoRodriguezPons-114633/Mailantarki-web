@@ -62,6 +62,7 @@ assets/images/                      vacía: acá van las imágenes
 - `longDescription`: párrafos.
 - `specs.area` / `specs.units` / `specs.status` / `specs.delivery`
 - `amenities`: la cantidad que quieras.
+- `highlights` (opcional): notas con título que aparecen en el capítulo de ficha técnica (hoy en Maylan Heights y Mauritius).
 - `alt` y `caption` de la portada, la galería y los planos (ya completos en los 4 proyectos con fotos, salvo los planos pendientes).
 
 **Fuera del archivo de datos**
@@ -70,7 +71,7 @@ assets/images/                      vacía: acá van las imágenes
 
 ## Rutas de imágenes
 
-Las fotos de `Desktop/aa1_fotos Mailantarki` ya están copiadas y optimizadas (JPG, máx. 2400 px). En esos 4 proyectos la portada reutiliza una imagen de la galería, así que no hay un `cover.jpg` aparte. Si cambiás el formato de una imagen, actualizá la extensión en `projects.js`. Podés agregar o quitar imágenes de galería y planos: los tabs se generan solos.
+Las fotos de `Desktop/aa1_fotos Mailantarki` (carpetas A a F) están copiadas y optimizadas: JPG de máximo 2400 px, y los planos recortados al dibujo. Si un proyecto no tiene `cover.jpg` propio, la portada reutiliza una imagen de la galería. Si cambiás el formato de una imagen, actualizá la extensión en `projects.js`. Podés agregar o quitar imágenes de galería y planos: los tabs se generan solos.
 
 ### Brand / home (site.images, site.map)
 
@@ -97,11 +98,11 @@ Las fotos de `Desktop/aa1_fotos Mailantarki` ya están copiadas y optimizadas (J
 
 | Uso | Ruta | Estado |
 |---|---|---|
-| Portada (hero + tarjeta) | `assets/images/projects/maylan-heights-life-camp/cover.jpg` | **falta** |
-| Galería 1 | `assets/images/projects/maylan-heights-life-camp/gallery-01.jpg` | **falta** |
-| Galería 2 | `assets/images/projects/maylan-heights-life-camp/gallery-02.jpg` | **falta** |
-| Galería 3 | `assets/images/projects/maylan-heights-life-camp/gallery-03.jpg` | **falta** |
-| Galería 4 | `assets/images/projects/maylan-heights-life-camp/gallery-04.jpg` | **falta** |
+| Portada (hero + tarjeta) | `assets/images/projects/maylan-heights-life-camp/gallery-01.jpg` | cargada |
+| Galería 1 | `assets/images/projects/maylan-heights-life-camp/gallery-01.jpg` | cargada |
+| Galería 2 | `assets/images/projects/maylan-heights-life-camp/gallery-02.jpg` | cargada |
+| Galería 3 | `assets/images/projects/maylan-heights-life-camp/gallery-03.jpg` | cargada |
+| Galería 4 | `assets/images/projects/maylan-heights-life-camp/gallery-04.jpg` | cargada |
 | Plano 1 | `assets/images/projects/maylan-heights-life-camp/plan-01.jpg` | **falta** |
 | Plano 2 | `assets/images/projects/maylan-heights-life-camp/plan-02.jpg` | **falta** |
 
@@ -131,7 +132,7 @@ Las fotos de `Desktop/aa1_fotos Mailantarki` ya están copiadas y optimizadas (J
 
 | Uso | Ruta | Estado |
 |---|---|---|
-| Portada (hero + tarjeta) | `assets/images/projects/daige-residences/gallery-01.jpg` | cargada |
+| Portada (hero + tarjeta) | `assets/images/projects/daige-residences/gallery-03.jpg` | cargada |
 | Galería 1 | `assets/images/projects/daige-residences/gallery-01.jpg` | cargada |
 | Galería 2 | `assets/images/projects/daige-residences/gallery-02.jpg` | cargada |
 | Galería 3 | `assets/images/projects/daige-residences/gallery-03.jpg` | cargada |
@@ -143,11 +144,9 @@ Las fotos de `Desktop/aa1_fotos Mailantarki` ya están copiadas y optimizadas (J
 
 | Uso | Ruta | Estado |
 |---|---|---|
-| Portada (hero + tarjeta) | `assets/images/projects/daige-heights-apartments/cover.jpg` | **falta** |
-| Galería 1 | `assets/images/projects/daige-heights-apartments/gallery-01.jpg` | **falta** |
-| Galería 2 | `assets/images/projects/daige-heights-apartments/gallery-02.jpg` | **falta** |
-| Galería 3 | `assets/images/projects/daige-heights-apartments/gallery-03.jpg` | **falta** |
-| Galería 4 | `assets/images/projects/daige-heights-apartments/gallery-04.jpg` | **falta** |
-| Plano 1 | `assets/images/projects/daige-heights-apartments/plan-01.jpg` | **falta** |
-| Plano 2 | `assets/images/projects/daige-heights-apartments/plan-02.jpg` | **falta** |
+| Portada (hero + tarjeta) | `assets/images/projects/daige-heights-apartments/gallery-01.jpg` | cargada |
+| Galería 1 | `assets/images/projects/daige-heights-apartments/gallery-01.jpg` | cargada |
+| Galería 2 | `assets/images/projects/daige-heights-apartments/gallery-02.jpg` | cargada |
+| Plano 1 | `assets/images/projects/daige-heights-apartments/plan-01.jpg` | cargada |
+| Plano 2 | `assets/images/projects/daige-heights-apartments/plan-02.jpg` | cargada |
 

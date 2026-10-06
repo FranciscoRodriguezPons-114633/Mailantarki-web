@@ -96,6 +96,7 @@ export function renderProject({ site, projects, root }) {
         title: esc(project.name),
         intro: `${esc(project.name)} in ${esc(districtLabel(project))}, one of ${projects.length} ${esc(site.name)} projects.`,
         rows: specRows(project),
+        notes: project.highlights || [],
         slides: project.gallery,
         viewerLabel: `${project.name} perspectives`,
       })}
