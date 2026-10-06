@@ -104,6 +104,8 @@ export const projects = [
     },
     // Exact site coordinates (decimal degrees). Pins are hidden until both are set.
     coordinates: { lat: null, lng: null }, // TODO: coordinates
+    // Hero line: short and worded differently from shortDescription (used as the Overview title).
+    tagline: "Retail, business and hospitality at one Asokoro address.",
     shortDescription: "A contemporary commercial address in Asokoro combining retail, business and hospitality within one architectural setting.",
     longDescription: [
       "The building combines a glazed entrance volume with curved façade elements, horizontal terraces, shaded walkways and planted external areas. One basement and five floors hold a supermarket, retail units, anchor shops, an office lounge and a coworking café.",
@@ -172,6 +174,8 @@ export const projects = [
     },
     // Exact site coordinates (decimal degrees). Pins are hidden until both are set.
     coordinates: { lat: null, lng: null }, // TODO: coordinates
+    // Hero line: short and worded differently from shortDescription (used as the Overview title).
+    tagline: "Premium residences and everyday commerce in Dape.",
     shortDescription: "A mixed-use development in Dape combining premium residences, integrated commercial spaces and modern infrastructure within a secure, well-planned environment.",
     longDescription: [
       "Maylan Heights is a thoughtfully curated mixed-use development created for individuals who value quality, convenience and long-term investment potential, positioned within the fast-growing Dape District of Abuja.",
@@ -256,6 +260,8 @@ export const projects = [
     },
     // Exact site coordinates (decimal degrees). Pins are hidden until both are set.
     coordinates: { lat: null, lng: null }, // TODO: coordinates
+    // Hero line: short and worded differently from shortDescription (used as the Overview title).
+    tagline: "Sport, leisure and stay along a green stream.",
     shortDescription: "A low-rise sports development bringing together football fields, courts, a hotel, an indoor pool and an open mall within a green landscape.",
     longDescription: [
       "Five low-rise buildings are distributed across an irregular site that follows the line of a water stream, linked by a simple road network and surrounded by lush vegetation, sports fields and open-air parking.",
@@ -305,16 +311,18 @@ export const projects = [
     ],
   },
   {
-    id: "mauritius-sports-complex",
+    id: "mauritius-golf-estate",
     // Texts, units, highlights and amenities: "Mauritius Description.docx".
     number: "04",
-    name: "Mauritius Sports Complex",
+    name: "Mauritius Golf Estate",
     location: {
       district: "Mabushi",
       city: "Abuja",
     },
     // Exact site coordinates (decimal degrees). Pins are hidden until both are set.
     coordinates: { lat: null, lng: null }, // TODO: coordinates
+    // Hero line: short and worded differently from shortDescription (used as the Overview title).
+    tagline: "Sixteen residences above the golf green.",
     shortDescription: "A nine-storey luxury apartment building of 16 residences overlooking the Mauritius Golf Course.",
     longDescription: [
       "Large balconies wrap a low-rise, nine-storey building, and some of the units open onto private infinity pools. Interiors and exteriors are composed for comfort and views, immersed in a high-end golf green environment with good accessibility and connectivity.",
@@ -354,46 +362,47 @@ export const projects = [
       "59 parking places",
     ],
     cover: {
-      src: "assets/images/projects/mauritius-sports-complex/gallery-03.jpg",
+      src: "assets/images/projects/mauritius-golf-estate/gallery-03.jpg",
       alt: "Night view of the residential tower with curved terraces and warm interior light",
     },
     gallery: [
       {
-        src: "assets/images/projects/mauritius-sports-complex/gallery-01.jpg",
+        src: "assets/images/projects/mauritius-golf-estate/gallery-01.jpg",
         alt: "Daytime view of the white residential tower rising above the tree line",
         caption: "Exterior / Tower above the landscape",
       },
       {
-        src: "assets/images/projects/mauritius-sports-complex/gallery-02.jpg",
+        src: "assets/images/projects/mauritius-golf-estate/gallery-02.jpg",
         alt: "Aerial concept view of stacked terraces with private pools and planting",
         caption: "Concept / Terraces and private pools",
       },
       {
-        src: "assets/images/projects/mauritius-sports-complex/gallery-03.jpg",
+        src: "assets/images/projects/mauritius-golf-estate/gallery-03.jpg",
         alt: "Night view of the residential tower with curved terraces and warm interior light",
         caption: "Exterior / Evening facade",
       },
       {
-        src: "assets/images/projects/mauritius-sports-complex/gallery-04.jpg",
+        src: "assets/images/projects/mauritius-golf-estate/gallery-04.jpg",
         alt: "Dining and living interior with marble floor and full-height glazing",
         caption: "Interior / Dining and living",
       },
     ],
     plans: [
       {
-        src: "assets/images/projects/mauritius-sports-complex/plan-01.jpg",
-        alt: "TODO: describe plan 1 of Mauritius Sports Complex",
+        src: "assets/images/projects/mauritius-golf-estate/plan-01.jpg",
+        alt: "TODO: describe plan 1 of Mauritius Golf Estate",
         caption: "TODO: plan 01 / level or typology",
       },
       {
-        src: "assets/images/projects/mauritius-sports-complex/plan-02.jpg",
-        alt: "TODO: describe plan 2 of Mauritius Sports Complex",
+        src: "assets/images/projects/mauritius-golf-estate/plan-02.jpg",
+        alt: "TODO: describe plan 2 of Mauritius Golf Estate",
         caption: "TODO: plan 02 / level or typology",
       },
     ],
   },
   {
     id: "daige-residences",
+    // Texts, highlights and amenities: Daige Residences brochure text (Games Village / Kaura District).
     number: "05",
     name: "Daige Residences",
     location: {
@@ -402,21 +411,46 @@ export const projects = [
     },
     // Exact site coordinates (decimal degrees). Pins are hidden until both are set.
     coordinates: { lat: null, lng: null }, // TODO: coordinates
-    shortDescription: "TODO: short description of Daige Residences (one sentence).",
+    // Hero line: short and worded differently from shortDescription (used as the Overview title).
+    tagline: "A new vision of home in Games Village.",
+    shortDescription: "Bespoke living in the heart of Games Village: a master-planned community of homes and apartments in Kaura District, Abuja.",
     longDescription: [
-      "TODO: long description of Daige Residences / paragraph 1.",
-      "TODO: long description of Daige Residences / paragraph 2.",
+      "Daige Residences brings a new vision of standards, reframing traditional notions about living. Set on Plot 1148, Cadastral Zone A09, around Games Village, it accommodates fully detached homes, semi-detached homes, terraces and apartments, close to Brickhall School and major areas of the FCT.",
+      "The estate already has its urban facilities installed for use, including a road network, sewage system, water supply and 33 kVA electricity supply, and it sits among numerous residential developments. Each unit is delivered within the agreed timeline, with a commitment to compensation for any delays.",
     ],
     specs: {
       area: "TODO: m²",
       gfa: "10,000 m²",
-      units: "TODO: units",
+      units: "6 home types",
       status: "Under Construction",
     },
+    // Optional: short labelled notes shown in the technical sheet chapter.
+    highlights: [
+      {
+        label: "The master-planned community",
+        text: "Arranged to promote order, comfort and community living, with a well-articulated road network, generous building spacing and landscaped green corridors that enhance airflow, privacy and visual appeal.",
+      },
+      {
+        label: "The layout",
+        text: "Seamless vehicular movement, clearly defined residential clusters, dedicated parking for residents and visitors, and a calm, low-density living environment.",
+      },
+      {
+        label: "Homes",
+        text: "4-bedroom semi-detached homes, 4-bedroom terrace homes and 5-bedroom villas, designed for privacy, space and multi-level contemporary living.",
+      },
+      {
+        label: "Apartments",
+        text: "2-bedroom and 3-bedroom apartments, including 3-bedroom apartments with BQ, for young professionals, growing families and rental investors.",
+      },
+    ],
     amenities: [
-      "TODO: amenity 01",
-      "TODO: amenity 02",
-      "TODO: amenity 03",
+      "Road network, sewage and water supply installed",
+      "33 kVA electricity supply",
+      "Dedicated resident and visitor parking",
+      "Landscaped green corridors",
+      "Schools, banks and restaurants nearby",
+      "Sports centre, mosque and church nearby",
+      "Minimart and Spar Mall nearby",
     ],
     cover: {
       src: "assets/images/projects/daige-residences/gallery-03.jpg",
@@ -467,6 +501,8 @@ export const projects = [
     },
     // Exact site coordinates (decimal degrees). Pins are hidden until both are set.
     coordinates: { lat: null, lng: null }, // TODO: coordinates
+    // Hero line: short and worded differently from shortDescription (used as the Overview title).
+    tagline: "TODO: hero tagline (short, different from the short description).",
     shortDescription: "TODO: short description of Daige Heights Apartments (one sentence).",
     longDescription: [
       "TODO: long description of Daige Heights Apartments / paragraph 1.",

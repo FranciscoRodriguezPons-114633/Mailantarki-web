@@ -64,7 +64,7 @@ export function renderProject({ site, projects, root }) {
           ${esc(districtLabel(project))} / ${txt(project.specs.area)} / ${esc(site.name)}
         </p>
         <h1 id="hero-title" data-mask-reveal>${esc(project.name)}</h1>
-        <p class="hero__claim" data-reveal>${txt(project.shortDescription)}</p>
+        <p class="hero__claim" data-reveal>${txt(project.tagline || project.shortDescription)}</p>
       </div>
       <div class="hero__footer" data-reveal>
         <span>Project ${esc(project.number)} / ${String(projects.length).padStart(2, "0")}</span>

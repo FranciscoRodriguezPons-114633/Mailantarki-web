@@ -58,11 +58,12 @@ assets/images/                      vacía: acá van las imágenes
 
 **En cada uno de los 6 proyectos**
 - `coordinates.lat` / `coordinates.lng`
-- `shortDescription`: 1 frase.
+- `tagline`: frase corta del hero, distinta de la descripción corta.
+- `shortDescription`: 1 frase (título del Overview y tarjetas).
 - `longDescription`: párrafos.
 - `specs.area` / `specs.units` (`specs.status` = Under Construction en todos; `specs.gfa` = 10,000 m² provisorio salvo Maylan Plaza y Sports Complex, que tienen el dato de sus informes)
 - `amenities`: la cantidad que quieras.
-- `highlights` (opcional): notas con título que aparecen en el capítulo de ficha técnica (hoy en Maylan Heights y Mauritius).
+- `highlights` (opcional): notas con título que aparecen en el capítulo de ficha técnica (hoy en Maylan Heights, Mauritius y Daige Residences).
 - `alt` y `caption` de la portada, la galería y los planos (ya completos en los 4 proyectos con fotos, salvo los planos pendientes).
 
 **Fuera del archivo de datos**
@@ -116,17 +117,17 @@ Las fotos de `Desktop/aa1_fotos Mailantarki` (carpetas A a F) están copiadas y 
 | Galería 3 | `assets/images/projects/mailantarki-sports-complex/gallery-03.jpg` | cargada |
 | Plano 1 | `assets/images/projects/mailantarki-sports-complex/plan-01.jpg` | cargada |
 
-### 04 / Mauritius Sports Complex / Mabushi
+### 04 / Mauritius Golf Estate / Mabushi
 
 | Uso | Ruta | Estado |
 |---|---|---|
-| Portada (hero + tarjeta) | `assets/images/projects/mauritius-sports-complex/gallery-03.jpg` | cargada |
-| Galería 1 | `assets/images/projects/mauritius-sports-complex/gallery-01.jpg` | cargada |
-| Galería 2 | `assets/images/projects/mauritius-sports-complex/gallery-02.jpg` | cargada |
-| Galería 3 | `assets/images/projects/mauritius-sports-complex/gallery-03.jpg` | cargada |
-| Galería 4 | `assets/images/projects/mauritius-sports-complex/gallery-04.jpg` | cargada |
-| Plano 1 | `assets/images/projects/mauritius-sports-complex/plan-01.jpg` | **falta** |
-| Plano 2 | `assets/images/projects/mauritius-sports-complex/plan-02.jpg` | **falta** |
+| Portada (hero + tarjeta) | `assets/images/projects/mauritius-golf-estate/gallery-03.jpg` | cargada |
+| Galería 1 | `assets/images/projects/mauritius-golf-estate/gallery-01.jpg` | cargada |
+| Galería 2 | `assets/images/projects/mauritius-golf-estate/gallery-02.jpg` | cargada |
+| Galería 3 | `assets/images/projects/mauritius-golf-estate/gallery-03.jpg` | cargada |
+| Galería 4 | `assets/images/projects/mauritius-golf-estate/gallery-04.jpg` | cargada |
+| Plano 1 | `assets/images/projects/mauritius-golf-estate/plan-01.jpg` | **falta** |
+| Plano 2 | `assets/images/projects/mauritius-golf-estate/plan-02.jpg` | **falta** |
 
 ### 05 / Daige Residences / Kaura
 
