@@ -59,6 +59,7 @@ assets/images/                      vacía: acá van las imágenes
 **En cada uno de los 6 proyectos**
 - `coordinates.lat` / `coordinates.lng`
 - `tagline`: frase corta del hero, distinta de la descripción corta.
+- `cardImage` (opcional): imagen de la tarjeta en la home si tiene que ser distinta de la portada (hoy en Daige Residences).
 - `shortDescription`: 1 frase (título del Overview y tarjetas).
 - `longDescription`: párrafos.
 - `specs.area` / `specs.units` (`specs.status` = Under Construction en todos; `specs.gfa` = 10,000 m² provisorio salvo Maylan Plaza y Sports Complex, que tienen el dato de sus informes)

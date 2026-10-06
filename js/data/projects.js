@@ -452,6 +452,11 @@ export const projects = [
       "Sports centre, mosque and church nearby",
       "Minimart and Spar Mall nearby",
     ],
+    // Optional: image for the project card (home + "More projects"). Falls back to cover.
+    cardImage: {
+      src: "assets/images/projects/daige-residences/gallery-01.jpg",
+      alt: "Aerial view of the Daige Residences estate with apartment blocks, terraced houses and a central amenity",
+    },
     cover: {
       src: "assets/images/projects/daige-residences/gallery-03.jpg",
       alt: "Four-storey apartment block with dark framing volumes and warm-lit balconies",

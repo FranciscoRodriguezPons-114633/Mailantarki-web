@@ -170,7 +170,7 @@ export const projectCard = (project, { headingLevel = 3 } = {}) => `
   <article class="project-card" data-reveal>
     <a class="project-card__link" href="${projectUrl(project.id)}">
       <figure class="project-card__media">
-        ${img(project.cover)}
+        ${img(project.cardImage || project.cover)}
         <figcaption class="image-caption">${esc(project.number)} / ${esc(districtLabel(project))}</figcaption>
       </figure>
       <div class="project-card__body">
