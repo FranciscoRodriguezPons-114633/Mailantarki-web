@@ -241,3 +241,13 @@
   font-size: 0.8rem;
   opacity: 0.62;
 }
+
+/* Gallery slide with fit: "contain" (js/data/projects.js): shows the whole
+   image, e.g. a portrait aerial master plan inside the 16:10 viewer. */
+.product-chapter__slide--contain {
+  background: var(--color-ink);
+}
+
+.product-chapter__slide--contain img {
+  object-fit: contain;
+}

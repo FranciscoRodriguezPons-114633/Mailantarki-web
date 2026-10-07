@@ -124,7 +124,7 @@ const slidesAndTabs = (slides, label, { sketch = false } = {}) => `
       ${slides
         .map(
           (slide, index) => `
-        <figure class="product-chapter__slide${sketch ? " product-chapter__slide--sketch" : ""}${index === 0 ? " is-active" : ""}" data-product-slide>
+        <figure class="product-chapter__slide${sketch ? " product-chapter__slide--sketch" : ""}${slide.fit === "contain" ? " product-chapter__slide--contain" : ""}${index === 0 ? " is-active" : ""}" data-product-slide>
           ${img(slide)}
           ${caption(slide.caption)}
         </figure>`,

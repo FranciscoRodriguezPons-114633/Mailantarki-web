@@ -42,8 +42,9 @@ export const site = {
 
   images: {
     hero: {
-      src: "assets/images/brand/hero.jpg",
-      alt: "Row of three-storey white townhouses with balconies, vertical screens and front parking",
+      // Same render as the Maylan Plaza cover (one file, no duplicate).
+      src: "assets/images/projects/maylan-plaza/gallery-01.jpg",
+      alt: "Maylan Plaza at dusk, a lit glass atrium framed by stone wings, palm trees and shopfronts along the street",
     },
     overview: {
       src: "assets/images/brand/overview.jpg",
@@ -315,6 +316,13 @@ export const projects = [
         src: "assets/images/projects/mailantarki-sports-complex/gallery-03.jpg",
         alt: "Terrace and stands overlooking the pitch, with the hospitality level behind glass",
         caption: "Grandstand / Terraces and hospitality level",
+      },
+      {
+        src: "assets/images/projects/mailantarki-sports-complex/gallery-04.jpg",
+        alt: "Aerial master plan of the sports complex: football pitches, housing clusters and courts along a landscaped water stream",
+        caption: "Aerial / Master plan along the stream",
+        // Portrait image: show it whole instead of cropping it to the 16:10 viewer.
+        fit: "contain",
       },
     ],
     plans: [

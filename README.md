@@ -69,6 +69,7 @@ assets/images/                      vacía: acá van las imágenes
 **En cada uno de los 6 proyectos**
 - `coordinates.lat` / `coordinates.lng`
 - `tagline`: frase corta del hero, distinta de la descripción corta.
+- `fit: "contain"` (opcional, en una imagen de galería): la muestra entera sin recortar, útil para imágenes verticales.
 - `cardImage` (opcional): imagen de la tarjeta en la home si tiene que ser distinta de la portada (hoy en Daige Residences).
 - `shortDescription`: 1 frase (título del Overview y tarjetas).
 - `longDescription`: párrafos.
@@ -89,7 +90,7 @@ Las fotos de `Desktop/aa1_fotos Mailantarki` (carpetas A a F) están copiadas y 
 
 | Uso | Ruta | Estado |
 |---|---|---|
-| Hero home (también og:image) | `assets/images/brand/hero.jpg` | **falta** |
+| Hero home (también og:image) | `assets/images/projects/maylan-plaza/gallery-01.jpg` (la misma portada de Maylan Plaza) | cargada |
 | Overview home | `assets/images/brand/overview.jpg` | **falta** |
 | Mapa de Abuja | `assets/images/map/abuja-map.jpg` | **falta** |
 | Studio | `assets/images/brand/studio.jpg` | **falta** |
