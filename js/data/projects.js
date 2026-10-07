@@ -18,29 +18,42 @@ export const site = {
   country: "Nigeria",
   showTodoMarkers: true,
 
-  // Brand / developer
-  developer: "TODO: developer name",
+  // Plans chapter on project pages. Off until every project has its plans
+  // (phase 2): the plan data and images stay in place, they are just not shown.
+  showPlans: false,
+
+  // Document portal (separate Next.js app with the client login). The header
+  // "Client portal" link opens /projects; each project page links straight to
+  // its documents with /projects/<portalSlug>. Signed-out visitors are asked to
+  // sign in (or enter a project code) and then land on that page.
+  portal: {
+    url: "https://portal.mailantarki.com",
+    label: "Client portal",
+  },
+
+  // Brand / organization (not shown as "developer" anywhere on the site)
+  developer: "Khamisu Ahmed Mailantarki",
   claim: "Six projects composed across Abuja, each with its own address.",
-  overviewTitle: "TODO: brand statement (one editorial sentence about Mailantarki).",
+  overviewTitle: "A portfolio of commercial, residential and sports addresses, shaped by one commitment to quality and place.",
   description: [
-    "TODO: brand / developer description / paragraph 1.",
-    "TODO: brand / developer description / paragraph 2.",
+    "MAILANTARKI brings together six projects across Abuja: Maylan Plaza in Asokoro, Maylan Heights Residences in Dape, the Mailantarki Sports Complex in Dakibiyu, Mauritius Golf Estate in Mabushi, Daige Residences in Kaura and Daige Heights Apartments in Katampe. Each one answers its district with its own program and identity, from commercial life and premium apartments to family communities and spaces for sport and leisure.",
+    "Under the direction of Khamisu Ahmed Mailantarki, the organization approaches every address with the same priorities: well-located land, contemporary architecture, secure and well-planned environments, and places designed to hold their value over time.",
   ],
 
   images: {
     hero: {
       src: "assets/images/brand/hero.jpg",
-      alt: "TODO: describe the Mailantarki hero image",
+      alt: "Row of three-storey white townhouses with balconies, vertical screens and front parking",
     },
     overview: {
       src: "assets/images/brand/overview.jpg",
-      alt: "TODO: describe the overview image",
-      caption: "TODO: overview caption",
+      alt: "Mailantarki Sports Complex grandstand at dusk, with lit stands and a football match on the pitch",
+      caption: "Mailantarki Sports Complex / Dakibiyu",
     },
     studio: {
       src: "assets/images/brand/studio.jpg",
-      alt: "TODO: describe the studio image (drawing, elevation, sketch)",
-      caption: "TODO: studio caption",
+      alt: "Mauritius Golf Estate, a white nine-storey residential building with curved balconies above the tree line",
+      caption: "Mauritius Golf Estate / Mabushi",
     },
   },
 
@@ -69,13 +82,13 @@ export const site = {
   contact: {
     title: ["Choose the address.", "We will take it from there."],
     details: [
-      { label: "Developer", value: "TODO: developer name" },
+      { label: "Mailantarki", value: "Khamisu Ahmed Mailantarki" },
       { label: "Project", value: "Rodriguez Pons Architects" },
       {
         label: "Website",
         links: [
           { label: "rodriguezpons.com", href: "https://www.rodriguezpons.com" },
-          { label: "TODO: mailantarki website", href: "#" },
+          { label: "mailantarki.com", href: "https://mailantarki.com" },
         ],
       },
       {
@@ -165,6 +178,8 @@ export const projects = [
   },
   {
     id: "maylan-heights-residences",
+    // Web address of this project in the document portal (defaults to `id`).
+    portalSlug: "maylan-heights-residence",
     // Texts and amenities: "MAYLAN HEIGHTS - Info" (Rodriguez Pons / Architects).
     number: "02",
     name: "Maylan Heights Residences",
@@ -498,6 +513,8 @@ export const projects = [
   },
   {
     id: "daige-heights-apartments",
+    portalSlug: "daige-heights-apartment",
+    // Texts, units, highlights and amenities: Daige Heights listing (prices and fees intentionally left out).
     number: "06",
     name: "Daige Heights Apartments",
     location: {
@@ -507,22 +524,40 @@ export const projects = [
     // Exact site coordinates (decimal degrees). Pins are hidden until both are set.
     coordinates: { lat: null, lng: null }, // TODO: coordinates
     // Hero line: short and worded differently from shortDescription (used as the Overview title).
-    tagline: "TODO: hero tagline (short, different from the short description).",
-    shortDescription: "TODO: short description of Daige Heights Apartments (one sentence).",
+    tagline: "Contemporary three-bedroom living in Katampe.",
+    shortDescription: "A collection of 30 three-bedroom apartments with contemporary architecture in the heart of Katampe, Abuja.",
     longDescription: [
-      "TODO: long description of Daige Heights Apartments / paragraph 1.",
-      "TODO: long description of Daige Heights Apartments / paragraph 2.",
+      "Daige Heights Apartments brings together 30 three-bedroom residences in the heart of Katampe, composed with a contemporary architectural language of white volumes, clean lines and open balconies.",
+      "Every bedroom is ensuite, complemented by a guest toilet, a fitted kitchen with pantry and private balconies, while an elevator and a central metered generator serve the whole building.",
     ],
     specs: {
       area: "TODO: m²",
       gfa: "10,000 m²",
-      units: "TODO: units",
+      units: "30 apartments",
       status: "Under Construction",
     },
+    // Optional: short labelled notes shown in the technical sheet chapter.
+    highlights: [
+      {
+        label: "Residences",
+        text: "30 three-bedroom apartments, all bedrooms ensuite, with a guest toilet and private balconies.",
+      },
+      {
+        label: "Kitchen",
+        text: "A fitted kitchen with pantry in every apartment.",
+      },
+      {
+        label: "Building services",
+        text: "Elevator access and a central metered generator serving the whole building.",
+      },
+    ],
     amenities: [
-      "TODO: amenity 01",
-      "TODO: amenity 02",
-      "TODO: amenity 03",
+      "All bedrooms ensuite",
+      "Guest toilet",
+      "Elevator",
+      "Balconies",
+      "Fitted kitchen with pantry",
+      "Central metered generator",
     ],
     cover: {
       src: "assets/images/projects/daige-heights-apartments/gallery-01.jpg",

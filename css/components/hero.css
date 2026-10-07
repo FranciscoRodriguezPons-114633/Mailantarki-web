@@ -63,8 +63,11 @@
     radial-gradient(ellipse at 18% 56%, rgb(24 24 21 / 0.42), transparent 62%),
     linear-gradient(0deg, rgb(24 24 21 / 0.5), transparent 82%);
   content: "";
-  inset: auto 0 0 calc(var(--gutter) * -1);
+  /* Full hero width: tied to the content box (max 94rem) it left a hard
+     vertical edge on screens wider than the container. */
+  inset: auto auto 0 calc(var(--gutter) * -1);
   min-height: min(52vh, 34rem);
+  width: 100vw;
   position: absolute;
   z-index: -1;
 }

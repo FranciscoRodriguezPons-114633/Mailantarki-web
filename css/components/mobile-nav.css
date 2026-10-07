@@ -85,7 +85,8 @@
 
 @media (max-width: 920px) {
   .nav,
-  .site-header__contact {
+  .site-header__contact,
+  .site-header__login {
     display: none;
   }
 

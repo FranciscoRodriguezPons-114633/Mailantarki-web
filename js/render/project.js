@@ -4,6 +4,7 @@ import {
   esc,
   img,
   isTodo,
+  portalUrl,
   productChapter,
   projectCard,
   projectUrl,
@@ -50,6 +51,11 @@ export function renderProject({ site, projects, root }) {
 
   updateDocumentMeta(site, project);
 
+  // Plans can be switched off globally (site.showPlans); numbering follows the visible sections.
+  const showPlans = site.showPlans !== false && project.plans.length > 0;
+  let sectionCount = 0;
+  const nextIndex = () => String(++sectionCount).padStart(2, "0");
+
   root.innerHTML = `
     <section class="hero hero--project" aria-labelledby="hero-title">
       <figure class="hero__media">
@@ -73,10 +79,11 @@ export function renderProject({ site, projects, root }) {
 
     <section class="section overview" id="overview" aria-labelledby="overview-title">
       <div class="layout-grid">
-        <p class="section__index" data-reveal>01 / Overview</p>
+        <p class="section__index" data-reveal>${nextIndex()} / Overview</p>
         <h2 id="overview-title" class="overview__title" data-reveal>${txt(project.shortDescription)}</h2>
         <div class="overview__copy" data-reveal>
           ${project.longDescription.map((paragraph) => `<p>${txt(paragraph)}</p>`).join("")}
+          ${portalUrl(site, project) ? `<p class="overview__portal"><a class="text-cta" href="${esc(portalUrl(site, project))}">Project documents</a><small>Sign-in required</small></p>` : ""}
         </div>
         <figure class="overview__image" data-reveal>
           ${img(project.gallery.find((image) => image.src !== project.cover.src) || project.cover)}
@@ -89,7 +96,7 @@ export function renderProject({ site, projects, root }) {
       ${productChapter({
         id: "gallery",
         modifier: "signature",
-        number: "02 / Technical sheet",
+        number: `${nextIndex()} / Technical sheet`,
         title: esc(project.name),
         intro: `${esc(project.name)} in ${esc(districtLabel(project))}, one of ${projects.length} ${esc(site.name)} projects.`,
         rows: specRows(project),
@@ -98,11 +105,11 @@ export function renderProject({ site, projects, root }) {
         viewerLabel: `${project.name} perspectives`,
       })}
       ${
-        project.plans.length
+        showPlans
           ? productChapter({
               id: "plans",
               modifier: "villas",
-              number: "03 / Plans",
+              number: `${nextIndex()} / Plans`,
               title: "Plans",
               intro: `Floor plans and layouts for ${esc(project.name)}. Select a sheet or tap the drawing to advance.`,
               slides: project.plans,
@@ -116,7 +123,7 @@ export function renderProject({ site, projects, root }) {
     <section class="section amenities" id="amenities" aria-labelledby="amenities-title">
       <div class="amenities__grid">
         <div class="amenities__header" data-reveal>
-          <p class="section__index">04 / Amenities</p>
+          <p class="section__index">${nextIndex()} / Amenities</p>
           <h2 id="amenities-title">Amenities</h2>
         </div>
         <ol class="amenities__list" data-reveal>
@@ -135,7 +142,7 @@ export function renderProject({ site, projects, root }) {
 
     <section class="section projects projects--more" id="more" aria-labelledby="more-title">
       <div class="projects__header" data-reveal>
-        <p class="section__index">05 / More projects</p>
+        <p class="section__index">${nextIndex()} / More projects</p>
         <h2 id="more-title">
           Next: <a href="${projectUrl(next.id)}">${esc(next.name)}</a>
         </h2>
@@ -148,7 +155,7 @@ export function renderProject({ site, projects, root }) {
     ${contactSection({
       site,
       projects,
-      index: "06",
+      index: nextIndex(),
       context: `${esc(project.name)} / ${esc(districtLabel(project))}`,
       selectedId: project.id,
     })}

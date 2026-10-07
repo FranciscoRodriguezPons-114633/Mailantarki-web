@@ -22,6 +22,13 @@ export const txt = (value) => {
 
 export const projectUrl = (id) => `project.html?id=${encodeURIComponent(id)}`;
 
+/* Document portal links (site.portal). Empty string when the portal is not configured. */
+export const portalUrl = (site, project) => {
+  const base = site.portal?.url?.replace(/\/+$/, "");
+  if (!base) return "";
+  return project ? `${base}/projects/${encodeURIComponent(project.portalSlug || project.id)}` : `${base}/projects`;
+};
+
 export const districtLabel = (project) => `${project.location.district}, ${project.location.city}`;
 
 export const img = (image = {}, { priority = false } = {}) => `

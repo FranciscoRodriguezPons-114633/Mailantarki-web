@@ -15,9 +15,19 @@ Los ES modules no funcionan con `file://`, así que hay que servir la carpeta:
 
 ```
 cd Mailantarki
-python3 -m http.server 8000
+python3 serve.py   # igual que http.server, pero sin caché del navegador
 # http://localhost:8000
 ```
+
+## Portal de clientes (login)
+
+- La landing vive en `mailantarki.com` y el portal de documentación (otro proyecto de Vercel, con el login) en `portal.mailantarki.com`. La URL está en `site.portal.url` de `projects.js`.
+- Header y menú mobile: botón "Client portal" → `/projects` del portal. Si no hay sesión, el portal muestra el login y la opción de código de proyecto.
+- Cada página de proyecto: "Project documents" → `/projects/<portalSlug>` del portal. Después del login (o del código), el usuario cae directo en ese proyecto. `portalSlug` es la dirección web del proyecto en el portal; si no está, se usa `id`.
+
+## Planos (fase 2)
+
+La sección Plans está apagada en todos los proyectos con `site.showPlans: false` en `projects.js`. Los datos y las imágenes de planos siguen guardados. Para mostrarla, cambiá a `true`: la sección, el link del menú y la numeración se ajustan solos.
 
 ## Placeholders
 
@@ -64,7 +74,7 @@ assets/images/                      vacía: acá van las imágenes
 - `longDescription`: párrafos.
 - `specs.area` / `specs.units` (`specs.status` = Under Construction en todos; `specs.gfa` = 10,000 m² provisorio salvo Maylan Plaza y Sports Complex, que tienen el dato de sus informes)
 - `amenities`: la cantidad que quieras.
-- `highlights` (opcional): notas con título que aparecen en el capítulo de ficha técnica (hoy en Maylan Heights, Mauritius y Daige Residences).
+- `highlights` (opcional): notas con título que aparecen en el capítulo de ficha técnica (hoy en Maylan Heights, Mauritius, Daige Residences y Daige Heights).
 - `alt` y `caption` de la portada, la galería y los planos (ya completos en los 4 proyectos con fotos, salvo los planos pendientes).
 
 **Fuera del archivo de datos**

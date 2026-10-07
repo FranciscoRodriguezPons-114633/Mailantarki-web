@@ -14,7 +14,7 @@ export function renderHome({ site, projects, root }) {
       <div class="hero__scrim" aria-hidden="true"></div>
       <div class="hero__content">
         <p class="hero__meta" data-reveal>
-          ${esc(site.city)}, ${esc(site.country)} / ${count} projects / By ${txt(site.developer)}
+          ${esc(site.city)}, ${esc(site.country)} / ${count} projects
         </p>
         <h1 id="hero-title" data-mask-reveal>${esc(site.name)}</h1>
         <p class="hero__claim" data-reveal>${txt(site.claim)}</p>

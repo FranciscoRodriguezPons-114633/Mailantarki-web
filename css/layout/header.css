@@ -86,3 +86,17 @@
 .site-header__contact:hover::after {
   transform: scaleX(1);
 }
+
+/* Link to the document portal (client login). Outlined so it reads as an action, not a section. */
+.site-header__login {
+  border: 1px solid rgb(245 242 237 / 0.45);
+  line-height: 1;
+  padding: 0.55rem 0.8rem;
+  transition: background var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out);
+}
+
+.site-header__login:hover,
+.site-header__login:focus-visible {
+  background: rgb(245 242 237 / 0.1);
+  border-color: var(--color-paper);
+}
